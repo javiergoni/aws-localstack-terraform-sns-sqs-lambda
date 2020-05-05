@@ -1,5 +1,8 @@
+import json
 def my_handler(event, context):
-    message = 'Hello {} {}!'.format(event['first_name'], event['last_name'])
+    sns = json.loads(json.loads(event['Records'][0]['body'])['Message'])
+    message = 'Hello {} {}!'.format(sns['first_name'], sns['last_name'])
+    print(message)
     return {
         'message': message
     }

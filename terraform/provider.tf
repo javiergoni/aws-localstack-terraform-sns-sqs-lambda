@@ -4,10 +4,13 @@ provider "aws" {
     secret_key                  = "qwe"
     skip_requesting_account_id  = true
     skip_credentials_validation = true
+
     endpoints {
-        lambda       = "http://localhost:4574"
-        sns          = "http://localhost:4575"
-        sqs          = "http://localhost:4576"
-        iam          = "http://localhost:4593"
+        lambda             = "http://localhost:4574"
+        sns                = "http://localhost:4575"
+        sqs                = "http://localhost:4576"
+        iam                = "http://localhost:4593"
+        cloudwatch         = "http://localhost:4586"
+        cloudwatchevents   = "http://localhost:4587"
     }
 }

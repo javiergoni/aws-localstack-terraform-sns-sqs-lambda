@@ -6,7 +6,7 @@ services:
       - "4567-4597:4567-4597"
       - "8080:8080"
     environment:
-      - SERVICES=sqs,sns,lambda,iam
+      - SERVICES=sqs,sns,lambda,iam,cloudwatch,events
       - DEBUG=0
       - DATA_DIR=/tmp/localstack
       - PORT_WEB_UI=8080

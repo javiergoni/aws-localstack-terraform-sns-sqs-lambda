@@ -43,5 +43,5 @@ $ docker-compose exec localstack bash -c "awslocal lambda list-functions"
 Publish 
 
 ```
-$ docker-compose exec localstack bash -c "awslocal sns publish --topic-arn $(terraform output test-sns-arn) --message 'hola'"
+$ docker-compose exec localstack bash -c "awslocal sns publish --topic-arn $(terraform output test-sns-arn) --message '{\"first_name\":\"Homer\", \"last_name\":\"Simpsons\"}'"
 ```
